@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menuDocument>
+
+      <menuBar>
+        <subMenu>
+          <label>Info Tool</label>
+          <titleItem>
+            <label>Info Tool</label>
+          </titleItem>
+          <scriptItem>
+            <label>Add Parameter Camera</label>
+            <scriptCode><![CDATA[
+import sys
+sys.path.append(hou.expandString('$HOUDINI_USER_PREF_DIR') + '/MMFTools/infoCamera/')
+from main import attachInfo
+attachInfo(kwargs, 'text_info')]]>
+            </scriptCode>
+          </scriptItem>
+          <scriptItem>
+            <label>Add Important Parameter Camera</label>
+            <scriptCode><![CDATA[
+import sys
+sys.path.append(hou.expandString('$HOUDINI_USER_PREF_DIR') + '/MMFTools/infoCamera/')
+from main import attachInfo
+attachInfo(kwargs, 'text_important')]]>
+            </scriptCode>
+          </scriptItem>
+          <scriptItem>
+            <label>Add Meta Parameter Camera</label>
+            <scriptCode><![CDATA[
+import sys
+sys.path.append(hou.expandString('$HOUDINI_USER_PREF_DIR') + '/MMFTools/infoCamera/')
+from main import attachInfo
+attachInfo(kwargs, 'text_meta')]]>
+            </scriptCode>
+          </scriptItem>
+        </subMenu>
+      </menuBar>
+
+</menuDocument>
+
